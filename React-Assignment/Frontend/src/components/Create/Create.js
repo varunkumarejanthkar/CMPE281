@@ -81,7 +81,7 @@ class Create extends Component{
         }
        
         axios.defaults.withCredentials = true;       
-        axios.post('http://localhost:3001/create',data)
+        axios.post('http://18.118.159.109:3001/create',data)
             .then(response => {
                 console.log("Status Code : ",response.status);
                 if(response.status === 200){
@@ -112,7 +112,7 @@ class Create extends Component{
             <div>
                 <br/>
                 <div class="container">
-                    <form action="http://127.0.0.1:3000/create" method="post">
+                    <form action="http://18.118.159.109:3000/create" method="post">
                         <div style={{width: '30%'}} class="form-group">
                             <input  onChange = {this.bookIdChangeHandler} onBlur = {this.bookIdFocusOutHandler} type="text" class="form-control" name="BookID" placeholder="Book ID"/>
                             <label style = {{color : "red", fontSize : "11px", marginLeft : "3px"}} id = "lblBookId"></label>
